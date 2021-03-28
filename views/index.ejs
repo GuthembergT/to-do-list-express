@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/createTask" method="POST">
+      <input id="input" type="text" name="task">
+      <button id="add">ADD</button>
+    </form>
+    <button id="clearCompleted">CLEAR COMPLETED</button>
+    <button id="clear">CLEAR</button>
+
+    <h2>Incomplete <span id="incompleteCount"><%= total%></span></h2>
+    <ul id="list">
+      <% for(i = 0; i < tasks.length; i++) { %>
+        <% if (tasks[i].completed) { %>
+          <li class="done"><button class="deleteTask">X</button><span id="task"><%= tasks[i].task %><span></li>
+        <% } %>
+        <% if (!tasks[i].completed) { %>
+          <li><button class="deleteTask">X</button><span id="task"><%= tasks[i].task %><span></li>
+        <% } %>
+      <% } %>
+    </ul>
+
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
