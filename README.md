@@ -1,11 +1,5 @@
+<<<<<<< HEAD
 ![To-Do List](public/todoReadme.png)
+=======
+>>>>>>> 03f1291676b228d1da86511d456cf8850719f9b5
 
-## Installation
-
-1. Clone repo
-2. run `npm install`
-
-## Usage
-
-1. run `npm run savage`
-2. Navigate to `localhost:3000`
